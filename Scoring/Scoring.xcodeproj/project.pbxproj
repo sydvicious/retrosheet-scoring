@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62348AD42A51E8B500150530 /* CityAffiliation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62348AD32A51E8B500150530 /* CityAffiliation.swift */; };
 		62998FFA2A4633AD000B4800 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998FF92A4633AD000B4800 /* Game.swift */; };
 		62998FFC2A4633FE000B4800 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998FFB2A4633FE000B4800 /* Team.swift */; };
 		629990002A467699000B4800 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998FFF2A467699000B4800 /* Person.swift */; };
@@ -17,6 +18,7 @@
 		6299900A2A46B694000B4800 /* Defense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629990092A46B694000B4800 /* Defense.swift */; };
 		6299900C2A46B85A000B4800 /* BattingOrderEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6299900B2A46B85A000B4800 /* BattingOrderEntry.swift */; };
 		6299900E2A46B975000B4800 /* UmpireState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6299900D2A46B975000B4800 /* UmpireState.swift */; };
+		629990132A492B9A000B4800 /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629990122A492B9A000B4800 /* Teams.swift */; };
 		62F037A22A45125D00F3F410 /* ScoringApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F037A12A45125D00F3F410 /* ScoringApp.swift */; };
 		62F037A42A45125D00F3F410 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F037A32A45125D00F3F410 /* ContentView.swift */; };
 		62F037A62A45125E00F3F410 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62F037A52A45125E00F3F410 /* Assets.xcassets */; };
@@ -44,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		62348AD32A51E8B500150530 /* CityAffiliation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityAffiliation.swift; sourceTree = "<group>"; };
 		62998FF92A4633AD000B4800 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		62998FFB2A4633FE000B4800 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		62998FFF2A467699000B4800 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 		629990092A46B694000B4800 /* Defense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defense.swift; sourceTree = "<group>"; };
 		6299900B2A46B85A000B4800 /* BattingOrderEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattingOrderEntry.swift; sourceTree = "<group>"; };
 		6299900D2A46B975000B4800 /* UmpireState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmpireState.swift; sourceTree = "<group>"; };
+		629990122A492B9A000B4800 /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
 		62F0379E2A45125D00F3F410 /* Scoring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scoring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F037A12A45125D00F3F410 /* ScoringApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoringApp.swift; sourceTree = "<group>"; };
 		62F037A32A45125D00F3F410 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,14 +101,15 @@
 			isa = PBXGroup;
 			children = (
 				62998FF92A4633AD000B4800 /* Game.swift */,
-				62998FFB2A4633FE000B4800 /* Team.swift */,
+				6299900B2A46B85A000B4800 /* BattingOrderEntry.swift */,
+				62348AD32A51E8B500150530 /* CityAffiliation.swift */,
+				629990092A46B694000B4800 /* Defense.swift */,
+				629990052A46AC51000B4800 /* Event.swift */,
+				629990072A46ADFB000B4800 /* GameState.swift */,
 				62998FFF2A467699000B4800 /* Person.swift */,
 				629990012A467C15000B4800 /* Position.swift */,
 				629990032A46A973000B4800 /* Stadium.swift */,
-				629990052A46AC51000B4800 /* Event.swift */,
-				629990072A46ADFB000B4800 /* GameState.swift */,
-				629990092A46B694000B4800 /* Defense.swift */,
-				6299900B2A46B85A000B4800 /* BattingOrderEntry.swift */,
+				62998FFB2A4633FE000B4800 /* Team.swift */,
 				6299900D2A46B975000B4800 /* UmpireState.swift */,
 			);
 			path = Models;
@@ -116,6 +121,14 @@
 				62F037A32A45125D00F3F410 /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		629990112A492B6A000B4800 /* Static Data */ = {
+			isa = PBXGroup;
+			children = (
+				629990122A492B9A000B4800 /* Teams.swift */,
+			);
+			path = "Static Data";
 			sourceTree = "<group>";
 		};
 		62F037952A45125D00F3F410 = {
@@ -144,6 +157,7 @@
 				62F037A12A45125D00F3F410 /* ScoringApp.swift */,
 				62F037A52A45125E00F3F410 /* Assets.xcassets */,
 				62998FFD2A467655000B4800 /* Models */,
+				629990112A492B6A000B4800 /* Static Data */,
 				62998FFE2A467665000B4800 /* Views */,
 				62F037AC2A45125E00F3F410 /* Scoring.entitlements */,
 				62F037AD2A45125E00F3F410 /* Info.plist */,
@@ -308,12 +322,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				629990022A467C15000B4800 /* Position.swift in Sources */,
+				62348AD42A51E8B500150530 /* CityAffiliation.swift in Sources */,
 				629990042A46A973000B4800 /* Stadium.swift in Sources */,
 				62F037A42A45125D00F3F410 /* ContentView.swift in Sources */,
 				629990062A46AC51000B4800 /* Event.swift in Sources */,
 				62998FFA2A4633AD000B4800 /* Game.swift in Sources */,
 				62998FFC2A4633FE000B4800 /* Team.swift in Sources */,
 				6299900A2A46B694000B4800 /* Defense.swift in Sources */,
+				629990132A492B9A000B4800 /* Teams.swift in Sources */,
 				6299900E2A46B975000B4800 /* UmpireState.swift in Sources */,
 				629990082A46ADFB000B4800 /* GameState.swift in Sources */,
 				629990002A467699000B4800 /* Person.swift in Sources */,

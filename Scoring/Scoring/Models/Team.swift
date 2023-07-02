@@ -5,26 +5,20 @@
 //  Created by Syd Polk on 6/23/23.
 //
 
-import Foundation
+import SwiftUI
 import SwiftData
 
 @Model
 final class Team {
-    struct CityAffiliation {
-        var city: String
-        var nickname: String?
-        var abbreviation: String?
-        var league: String
-        var year: Int
-    }
-    
     @Attribute(.unique) var id: UUID
     var cityAffiliations: [CityAffiliation]
-    var players: [Player]
+    var players: [Person]
         
-    init() {
+    init(city: String, nickname: String?, league: String, year: Int) {
         self.id = UUID()
         self.cityAffiliations = []
+        let affilation = CityAffiliation(city: city, nickname: nickname, league: league, year: year)
+        self.cityAffiliations.append(affilation)
         self.players = []
     }
     

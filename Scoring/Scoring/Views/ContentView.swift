@@ -17,9 +17,9 @@ struct ContentView: View {
             List {
                 ForEach(games) { game in
                     NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        Text("Item at \(game.datePlayed, format: Date.FormatStyle(date: .numeric, time: .standard))")
                     } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                        Text("\(game.datePlayed, format: Date.FormatStyle(date: .numeric, time: .standard))")
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -40,15 +40,19 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
+            /*
+            let formatter = DateFormatter()
+            let newGame = Game(datePlayed: formatter.date(from: "May 24, 1994")!, stadium: Stadium(name: "Dodger Stadium", city: "Los Angeles", state: "CA"), startTime: formatter.date(from: "May 24, 1994 19:05 PDT")!, umpireState: UmpireState(firstBase: Person(lastName: "Joyce", firstName: "Jim")), visitingTeam: Team(), vistingDefenese: <#T##Defense#>, visitingBattingOrder: <#T##[BattingOrderEntry]#>, homeTeam: <#T##Team#>, homeDefense: <#T##Defense#>, homeBattingOrder: <#T##[BattingOrderEntry]#>, state: <#T##GameState#>, events: <#T##[Event]#>)
             let newItem = Item(timestamp: Date())
             modelContext.insert(newItem)
+             */
         }
     }
 
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             for index in offsets {
-                modelContext.delete(items[index])
+                modelContext.delete(games[index])
             }
         }
     }
@@ -56,5 +60,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .modelContainer(for: Game.self, inMemory: true)
 }
