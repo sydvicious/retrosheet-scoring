@@ -12,6 +12,9 @@ struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var games: [Game]
     
+    @State private var gameWizardCompleted: Bool = true
+    @State private var newGame: Game? = nil
+    
     var body: some View {
         NavigationView {
             List {

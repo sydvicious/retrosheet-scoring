@@ -12,20 +12,21 @@ import SwiftData
 final class Game {
     
     var datePlayed: Date
-    var gameNumber: Int
-    var homeTeamBatFirst: Bool
-    var stadium: Stadium
-    
-    var useDH: Bool
     var startTime: Date
-    var gameTime: String?
+    var gameNumber: Int
+    var stadium: Stadium
     var sky: String?
     var gameTimeTemp: Int?
     var wind: String?
     var dayNight: String?
     var scoringMethod: String
     var scoringMediaOutlet: String?
+
+    var useDH: Bool
+    var homeTeamBatFirst: Bool
+
     var attendance: Int?
+    var gameTime: String?
     
     var winningPitcher: Person?
     var losingPitcher: Person?
